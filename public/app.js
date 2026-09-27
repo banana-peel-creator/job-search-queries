@@ -49,7 +49,7 @@ const LOCATIONS = {
   boston: '("Boston, Massachusetts" OR "Boston, MA" OR "Boston MA")',
 };
 
-const EXCLUSIONS = '-jobgether -talent.com';
+//const EXCLUSIONS = '-jobgether -talent.com';
 
 // Google ignores query terms past 32 words, so "Search All" is split into
 // several queries that each stay under the limit. OR and site: terms count.
@@ -75,7 +75,7 @@ function siteClause(sites) {
 
 function buildQuery(title, sites, location) {
   const phrase = `"${title.replace(/"/g, '')}"`;
-  return [phrase, siteClause(sites), LOCATIONS[location], EXCLUSIONS].join(' ');
+    return [phrase, siteClause(sites), LOCATIONS[location]].join(' ');
 }
 
 function buildUrl(query, qdr) {
