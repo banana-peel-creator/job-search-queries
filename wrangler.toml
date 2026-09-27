@@ -1,4 +1,4 @@
-name = "job-searcher"
+name = "job-search-queries"
 compatibility_date = "2026-09-01"
 
 # Static site only: no Worker script, just serve the files in public/.
