@@ -46,7 +46,7 @@ const BOARDS = [
 const LOCATIONS = {
   remote: '"remote"',
   // Job posts phrase Boston inconsistently, so match any of these.
-  boston: '("Boston, Massachusetts" OR "Boston, MA" OR "Boston MA")',
+  boston: '("Boston, Massachusetts" OR "Boston, MA" OR "Boston MA" OR "Boston")',
 };
 
 //const EXCLUSIONS = '-jobgether -talent.com';
