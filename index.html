@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Job Search Queries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Job Search Queries</h1>
+    <p class="lede">Builds Google searches against applicant-tracking-system job boards.</p>
+
+    <form id="form" novalidate>
+      <div class="field">
+        <label for="title">Job Title</label>
+        <input id="title" type="text" placeholder="Enter job title..." autocomplete="off" aria-describedby="title-error">
+        <p id="title-error" class="error" role="alert" hidden>Enter a job title first.</p>
+      </div>
+
+      <div class="row">
+        <fieldset class="field">
+          <legend>Location</legend>
+          <div class="segmented">
+            <input type="radio" name="location" id="loc-remote" value="remote" checked>
+            <label for="loc-remote">Remote</label>
+            <input type="radio" name="location" id="loc-boston" value="boston">
+            <label for="loc-boston">Boston, MA</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="posted">Posted within</label>
+          <select id="posted"></select>
+          <p class="caption">
+            Custom ranges (e.g. 6 hours, 3 days) use an undocumented Google parameter.
+            It usually works, but Google may widen it to the nearest hour/day/week, so results may not be exact.
+          </p>
+        </div>
+      </div>
+    </form>
+
+    <section>
+      <h2>Job boards</h2>
+      <div id="boards" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>All boards</h2>
+      <div id="all" class="grid"></div>
+      <p id="all-note" class="caption"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
