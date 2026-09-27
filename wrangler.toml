@@ -1,3 +1,6 @@
-name = "job-search-queries"
+name = "job-searcher"
 compatibility_date = "2026-09-01"
-pages_build_output_dir = "public"
+
+# Static site only: no Worker script, just serve the files in public/.
+[assets]
+directory = "./public"
